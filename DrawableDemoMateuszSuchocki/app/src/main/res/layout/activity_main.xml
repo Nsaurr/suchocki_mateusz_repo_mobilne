@@ -4,15 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    android:backgroundTint="@color/background1"
+    android:backgroundTintMode="multiply"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/ms_Facebook3"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/roundbutton"
+        android:drawableLeft="@drawable/instagram_smaller"
+        android:text="Our Instagram"
+        app:backgroundTint="@color/foreground"
+        app:layout_constraintEnd_toEndOf="@+id/ms_ButttonSingup"
+        app:layout_constraintStart_toEndOf="@+id/ms_Facebook"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ButttonSingup" />
+
+    <Button
+        android:id="@+id/ms_Facebook4"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/roundbutton"
+        android:drawableLeft="@drawable/logo1_smaller"
+        android:text="Our Website"
+        app:backgroundTint="@color/foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ms_Facebook3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ms_Facebook"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ButttonSingup" />
+
+    <View
+        android:id="@+id/ms_Line1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/ms_textLine"
+        app:layout_constraintStart_toStartOf="@+id/ms_ButttonLogin"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ButttonLogin" />
+
+    <View
+        android:id="@+id/ms_Line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_ButttonLogin"
+        app:layout_constraintStart_toEndOf="@+id/ms_textLine"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ButttonLogin" />
+
+    <ImageView
+        android:id="@+id/ms_ImageLogo"
+        android:layout_width="143dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="117dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_augur_2" />
+
+    <EditText
+        android:id="@+id/ms_TextLogin"
+        android:layout_width="379dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Username"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ImageLogo" />
+
+    <EditText
+        android:id="@+id/ms_TextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        app:layout_constraintEnd_toEndOf="@+id/ms_TextLogin"
+        app:layout_constraintStart_toStartOf="@+id/ms_TextLogin"
+        app:layout_constraintTop_toBottomOf="@+id/ms_TextLogin" />
+
+    <Button
+        android:id="@+id/ms_ButttonLogin"
+        android:layout_width="367dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/roundbutton"
+        android:text="Login"
+        app:backgroundTint="@color/foreground"
+        app:layout_constraintEnd_toEndOf="@+id/ms_TextPassword"
+        app:layout_constraintStart_toStartOf="@+id/ms_TextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/ms_TextPassword" />
+
+    <Button
+        android:id="@+id/ms_Facebook"
+        android:layout_width="183dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/roundbutton"
+        android:drawableLeft="@drawable/facebook_smaller"
+        android:text="Our Facebook"
+        app:backgroundTint="@color/foreground"
+        app:layout_constraintStart_toStartOf="@+id/ms_ButttonSingup"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ButttonSingup" />
+
+    <Button
+        android:id="@+id/ms_ButttonSingup"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/roundbutton"
+        android:text="Sign Up"
+        app:backgroundTint="@color/foreground"
+        app:layout_constraintEnd_toEndOf="@+id/ms_ButttonLogin"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="@+id/ms_ButttonLogin"
+        app:layout_constraintTop_toBottomOf="@+id/ms_textLine" />
+
     <TextView
+        android:id="@+id/ms_textLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="14dp"
+        android:text="OR"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/ms_Line"
+        app:layout_constraintStart_toEndOf="@+id/ms_Line1"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ButttonLogin" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

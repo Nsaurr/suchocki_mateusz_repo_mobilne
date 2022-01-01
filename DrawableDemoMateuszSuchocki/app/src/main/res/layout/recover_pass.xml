@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/steto"
+    android:backgroundTint="@color/background2"
+    android:backgroundTintMode="multiply">
+
+    <EditText
+        android:id="@+id/ms_EmailRecover"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="364dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/roundbutton"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/whiteopa"
+        app:layout_constraintEnd_toEndOf="@+id/ms_text"
+        app:layout_constraintStart_toStartOf="@+id/ms_text"
+        app:layout_constraintTop_toBottomOf="@+id/ms_text" />
+
+    <ImageView
+        android:id="@+id/ms_ImageView2"
+        android:layout_width="90dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="143dp"
+        android:background="@drawable/roundimage"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_red_cross_icon" />
+
+    <TextView
+        android:id="@+id/ms_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Recover your password"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/ms_ImageView2"
+        app:layout_constraintStart_toStartOf="@+id/ms_ImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ImageView2" />
+
+    <Button
+        android:id="@+id/ms_ButtonReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="SUBMIT"
+        android:textSize="24dp"
+        android:background="@drawable/roundbutton"
+        android:textColor="@color/blue"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_EmailRecover"
+        app:layout_constraintStart_toStartOf="@+id/ms_EmailRecover"
+        app:layout_constraintTop_toBottomOf="@+id/ms_EmailRecover" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plane"
+    android:backgroundTint="@color/bluebac"
+    android:backgroundTintMode="multiply">
+
+    <Button
+        android:id="@+id/ms_Soft"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/roundbutton"
+        android:drawableRight="@drawable/ic_wordpress_blue_logo"
+        android:text="SOFT"
+        android:textColor="@color/blue"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_buttonPassFOr"
+        app:layout_constraintStart_toStartOf="@+id/ms_buttonPassFOr"
+        app:layout_constraintTop_toBottomOf="@+id/ms_buttonPassFOr" />
+
+    <EditText
+        android:id="@+id/ms_TextLogin2"
+        android:layout_width="379dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Username or Agent"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ms_LoginVIew" />
+
+    <EditText
+        android:id="@+id/ms_TextPassword1"
+        android:layout_width="379dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_TextLogin2"
+        app:layout_constraintStart_toStartOf="@+id/ms_TextLogin2"
+        app:layout_constraintTop_toBottomOf="@+id/ms_TextLogin2" />
+
+    <EditText
+        android:id="@+id/ms_TextCompany"
+        android:layout_width="379dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Company"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_TextPassword1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ms_TextPassword1"
+        app:layout_constraintTop_toBottomOf="@+id/ms_TextPassword1" />
+
+    <ImageView
+        android:id="@+id/ms_imageView"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_facebook_like" />
+
+    <TextView
+        android:id="@+id/ms_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="48dp"
+        android:text="Airpost Assitance"
+        android:textColor="@color/white"
+        android:textSize="29dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ms_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ms_imageView"
+        app:layout_constraintTop_toTopOf="@+id/ms_imageView" />
+
+    <TextView
+        android:id="@+id/ms_LoginVIew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/ms_textView"
+        app:layout_constraintStart_toStartOf="@+id/ms_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/ms_textView" />
+
+    <Button
+        android:id="@+id/ms_LoginBTN"
+        android:layout_width="374dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/box"
+        android:text="LOGIN"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="@+id/ms_TextCompany"
+        app:layout_constraintStart_toStartOf="@+id/ms_TextCompany"
+        app:layout_constraintTop_toBottomOf="@+id/ms_TextCompany" />
+
+    <Button
+        android:id="@+id/ms_RegisterBTN2"
+        android:layout_width="374dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/box"
+        android:text="Register"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="@+id/ms_Line"
+        app:layout_constraintStart_toStartOf="@+id/ms_Line1"
+        app:layout_constraintTop_toBottomOf="@+id/ms_textLine" />
+
+    <View
+        android:id="@+id/ms_Line1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/ms_textLine"
+        app:layout_constraintStart_toStartOf="@+id/ms_LoginBTN"
+        app:layout_constraintTop_toBottomOf="@+id/ms_LoginBTN" />
+
+    <View
+        android:id="@+id/ms_Line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_LoginBTN"
+        app:layout_constraintStart_toEndOf="@+id/ms_textLine"
+        app:layout_constraintTop_toBottomOf="@+id/ms_LoginBTN"/>
+    <TextView
+        android:id="@+id/ms_textLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="14dp"
+        android:text="OR"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/ms_Line"
+        app:layout_constraintStart_toEndOf="@+id/ms_Line1"
+        app:layout_constraintTop_toBottomOf="@+id/ms_LoginBTN"
+        />
+
+    <Button
+        android:id="@+id/ms_buttonPassFOr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:text="Forgotten Password"
+        android:background="@drawable/roundbutton"
+        app:backgroundTint="@color/deepblue"
+        app:layout_constraintEnd_toEndOf="@+id/ms_RegisterBTN2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ms_RegisterBTN2"
+        app:layout_constraintTop_toBottomOf="@+id/ms_RegisterBTN2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:backgroundTint="@color/background2"
+    android:backgroundTintMode="multiply">
+
+    <Button
+        android:id="@+id/ms_Signup"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/roundbutton"
+        android:drawableLeft="@drawable/ic_baseline_person_add_24"
+        android:text="Sign up"
+        android:textColor="@color/blue"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_PasswordChange"
+        app:layout_constraintStart_toStartOf="@+id/ms_PasswordChange"
+        app:layout_constraintTop_toBottomOf="@+id/ms_PasswordChange" />
+
+    <Button
+        android:id="@+id/ms_Login"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/roundbutton"
+        android:drawableLeft="@drawable/ic_baseline_person_search_24"
+        android:text="Login"
+        android:textColor="@color/blue"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ms_PasswordChange"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ms_PasswordChange"
+        app:layout_constraintTop_toBottomOf="@+id/ms_Or" />
+
+    <ImageView
+        android:id="@+id/ms_ImageView"
+        android:layout_width="90dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="143dp"
+        android:background="@drawable/roundimage"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_red_cross_icon" />
+
+    <TextView
+        android:id="@+id/ms_TextViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SignUp to Yddet"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/ms_ImageView"
+        app:layout_constraintStart_toStartOf="@+id/ms_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/ms_ImageView" />
+
+    <EditText
+        android:id="@+id/ms_Username"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="364dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/roundbutton"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="your username"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/whiteopa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ms_TextViewWelcome" />
+
+    <EditText
+        android:id="@+id/ms_Email"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="364dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundbutton"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="email"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/whiteopa"
+        app:layout_constraintEnd_toEndOf="@+id/ms_Username"
+        app:layout_constraintStart_toStartOf="@+id/ms_Username"
+        app:layout_constraintTop_toBottomOf="@+id/ms_Username" />
+
+    <EditText
+        android:id="@+id/ms_Password"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="364dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundbutton"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="password"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/whiteopa"
+        app:layout_constraintEnd_toEndOf="@+id/ms_Email"
+        app:layout_constraintStart_toStartOf="@+id/ms_Email"
+        app:layout_constraintTop_toBottomOf="@+id/ms_Email" />
+
+    <EditText
+        android:id="@+id/ms_PasswordChange"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="364dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundbutton"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="change password"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/whiteopa"
+        app:layout_constraintEnd_toEndOf="@+id/ms_Password"
+        app:layout_constraintStart_toStartOf="@+id/ms_Password"
+        app:layout_constraintTop_toBottomOf="@+id/ms_Password" />
+
+    <Button
+        android:id="@+id/ms_Or"
+        android:layout_width="75dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundimage"
+        android:text="OR"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="@+id/ms_Signup"
+        app:layout_constraintStart_toStartOf="@+id/ms_Signup"
+        app:layout_constraintTop_toBottomOf="@+id/ms_Signup" />
+
+    <TextView
+        android:id="@+id/ms_TextFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="Take control of your health"
+        app:layout_constraintEnd_toEndOf="@+id/ms_Login"
+        app:layout_constraintStart_toStartOf="@+id/ms_Login"
+        app:layout_constraintTop_toBottomOf="@+id/ms_Login" />
+</androidx.constraintlayout.widget.ConstraintLayout>
