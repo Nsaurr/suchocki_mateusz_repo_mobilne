@@ -1,5 +1,8 @@
 package com.example.pozycjonowanieelemntowmateuszsuchocki;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -20,6 +23,7 @@ import java.io.OutputStreamWriter;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         File path = getFilesDir();
         File file = new File(path, "plik.txt");
         String tekst = text.getText().toString();
+        requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE}, 1);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
