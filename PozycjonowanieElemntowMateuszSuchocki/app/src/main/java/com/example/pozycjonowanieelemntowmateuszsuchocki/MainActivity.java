@@ -12,14 +12,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,41 +34,46 @@ public class MainActivity extends AppCompatActivity {
         Button save = findViewById(R.id.buttonSave);
         Button load = findViewById(R.id.buttonLoad);
         TextView text = findViewById(R.id.editTextTextPersonName);
-        File path = getFilesDir();
-        File file = new File(path, "plik.txt");
-        String tekst = text.getText().toString();
-        requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE}, 1);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    FileWriter fileWriter= new FileWriter(file);
-                    BufferedWriter out = new BufferedWriter(fileWriter);
-                    out.write(tekst);
-                    out.close();
-                } catch (IOException e) {
-                    Log.e("Exception", "File write failed: " + e.toString());
-                }
+                String content = text.getText().toString();
+                writeToFile("plik.txt", content);
+                text.setText("");
             }
         });
         load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int length = (int) file.length();
-
-                byte[] bytes = new byte[length];
-
-               try {
-                   FileInputStream in = new FileInputStream(file);
-                   in.read(bytes);
-                   in.close();
-               }catch (IOException e) {
-                   Log.e("Exception", "File read failed: " + e.toString());
-               }
-
-                String contents = new String(bytes);
-                text.setText(contents);
+               String content = readFromFile("plik.txt");
+               text.setText(content);
             }
         });
+    }
+
+    public String readFromFile(String fileName){
+        File path = getApplicationContext().getFilesDir();
+        File readFrom = new File(path, fileName);
+        byte[] content = new byte[(int)readFrom.length()];
+        try{
+            FileInputStream stream = new FileInputStream(readFrom);
+            stream.read(content);
+            return new String(content);
+        }catch(Exception e){
+            e.printStackTrace();
+            return e.toString();
+        }
+    }
+
+    public void writeToFile(String fileName, String content){
+        File path = getApplicationContext().getFilesDir();
+        try {
+            FileOutputStream writer = new FileOutputStream(new File(path, fileName));
+            writer.write(content.getBytes(StandardCharsets.UTF_8));
+            writer.close();
+            Toast.makeText(getApplicationContext(), "Pomyślnie zapisano do pliku: "+fileName, Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
